@@ -102,10 +102,10 @@
                 </select>
             </div>
             <div class="input-group">
-                <textarea class="form-control" placeholder="Расскажите о себе..." <?php if ($errors['bio']) {print 'class="error"';} ?>><?php print $values['bio']; ?></textarea>
+                <textarea class="form-control" placeholder="Расскажите о себе..." name="bio" <?php if ($errors['bio']) {print 'class="error"';} ?>><?php print $values['bio']; ?></textarea>
             </div>
             <div class="form-check" id="policy">
-                <input class="form-check-input" type="checkbox" value="y" id="policy" name="policy" />
+                <input class="form-check-input" type="checkbox" value="y" id="policy" name="policy" checked/>
                 <label class="form-check-label" for="policy">Ознакомлен с <a href="./login.php">политикой конфиденциальности</a>.</label>
             </div>
             <button class="btn btn-primary" type="submit" id="send-btn">Отправить</button>
