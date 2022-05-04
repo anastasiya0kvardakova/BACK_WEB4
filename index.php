@@ -160,7 +160,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $stmt->execute(array($name, $email, $date, $gender, $limbs, $bio, $policy));
         $power_id = $db->lastInsertId();
 
-        $superpowers = $db->prepare("INSERT INTO superpowers SET powers = ?, user_id = ? ");
+        $superpowers = $db->prepare("INSERT INTO superpowers SET powers = ?, userID = ? ");
         $superpowers->execute(array($powers, $power_id));
     } catch (PDOException $e) {
         print('Error : ' . $e->getMessage());
